@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'real-world-nuxt111',
+    title: 'real-world-nuxt',
     htmlAttrs: {
       lang: 'en',
     },

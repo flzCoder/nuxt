@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    <card v-for="i in list" :key="i"></card>
+    <card
+      v-for="(item, i) in dealedData.BBM50AKDwangning"
+      :key="i"
+      :item="item"
+    >
+    </card>
   </div>
 </template>
 
@@ -10,15 +15,26 @@ export default {
   components: {
     card,
   },
-  data() {
-    return {
-      list: [],
-    }
-  },
-  created() {
-    for (let i = 0; i < 10; i++) {
-      this.list.push(i)
-    }
+  async asyncData({ app, params }) {
+    const newlist = await app.$axios.get(
+      'https://3g.163.com/touch/reconstruct/article/list/BBM50AKDwangning/20-20.html'
+    )
+    const dealedData = JSON.parse(newlist.data.trim().slice(9, -1))
+    return { dealedData }
   },
 }
 </script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+</style>
