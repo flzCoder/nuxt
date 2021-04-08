@@ -26,6 +26,7 @@
     "@nuxtjs/axios": "^5.12.5",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
+    "request": "^2.88.2",
     "vue-resource": "^1.5.2"
   },
   "devDependencies": {

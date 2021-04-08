@@ -3,14 +3,12 @@
     "name": "channel",
     "path": "/channel",
     "component": "/Users/fengluzheb12652/workspace/nuxtssr/pages/channel.vue",
-    "chunkName": "pages/channel",
-    "_name": "_17b6cd6d"
+    "chunkName": "pages/channel"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/fengluzheb12652/workspace/nuxtssr/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_4dcfa63c"
+    "chunkName": "pages/index"
   }
 ]
