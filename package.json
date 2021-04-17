@@ -1,0 +1,20 @@
+{
+  "name": "nuxtprue",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "dev:express": "cross-env NODE_ENV=development node index.js ",
+    "start:express": "cross-env NODE_ENV=production node index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.9.1",
+    "nuxt": "^2.15.3"
+  },
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
