@@ -16,8 +16,7 @@ export default {
   css: [],
   components: true,
   modules: [
-    '@nuxtjs/axios',
-    '@nuxt/content',
+    '@nuxtjs/axios'
   ],
   srcDir: 'nuxt/',
   router: {
