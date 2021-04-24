@@ -7,8 +7,9 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "dev:express": "cross-env NODE_ENV=development node index.js ",
-    "start:express": "cross-env NODE_ENV=production node index.js"
+    "dev:express": "cross-env NODE_ENV=development node start.js ",
+    "start:express": "cross-env NODE_ENV=production node start.js",
+    "pm2": "pm2 start ecosystem.config.js --env prod"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
