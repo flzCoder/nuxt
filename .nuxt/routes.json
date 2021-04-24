@@ -3,12 +3,14 @@
     "name": "nuxt-video-id",
     "path": "/nuxt/video/:id?",
     "component": "/Users/fengluzheb12652/workspace/nuxtprue/nuxt/pages/nuxt/video/_id.vue",
-    "chunkName": "pages/nuxt/video/_id"
+    "chunkName": "pages/nuxt/video/_id",
+    "_name": "_3220fe92"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/fengluzheb12652/workspace/nuxtprue/nuxt/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_f017e0ec"
   }
 ]
