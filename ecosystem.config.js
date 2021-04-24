@@ -1,9 +1,15 @@
 module.exports = {
   apps : [{
-    name: 'nuxtssr',
-    exec_mode: 'cluster',
-    instances: 4,
-    script: './node_modules/nuxt/bin/nuxt.js',
-    args: 'start'
+    name: "nuxtssr",
+    script: "./start.js",
+    instances  : 4,
+    exec_mode  : "cluster",
+    env: {
+      NODE_ENV: "development",
+    },
+    env_prod: {
+      NODE_ENV: "production",
+    }
   }]
 }
+

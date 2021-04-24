@@ -22,5 +22,10 @@ export default {
   router: {
     middleware: 'render',
   },
-  hooks: hooks(this)
+  hooks: hooks(this),
+  server: {
+    port: 8181,
+    host: '0.0.0.0',
+  },
+
 }
