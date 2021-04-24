@@ -1,8 +1,8 @@
 module.exports = {
   apps : [{
-    name: "ssr",
+    name: "nuxtssr",
     script: "./start.js",
-    instances  : 8,
+    instances  : 4,
     exec_mode  : "cluster",
     env: {
       NODE_ENV: "development",

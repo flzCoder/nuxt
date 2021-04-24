@@ -27,7 +27,7 @@ export default {
     return { dealedData }
   },
   middleware: async (ctx) => {
-    console.log('pages middleware');
+    // console.log('pages middleware');
   }
 }
 </script>

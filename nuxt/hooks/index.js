@@ -1,3 +1,5 @@
+const { sendToVdruid } = require('../utils/analysis.js')
+
 export default nuxtConfig => ({
   'vue-renderer:context'(context) {
     context.req.reqStartTime = +new Date()
@@ -11,13 +13,17 @@ export default nuxtConfig => ({
   'render:beforeResponse'(url, result, context){
     context.req.reqEndTime = +new Date()
 
+    // console.log('reqStartTime', context.req.reqStartTime);
+    // console.log('renderStartTime', context.req.renderStartTime);
+    // console.log('renderEndTime', context.req.renderEndTime);
+    // console.log('reqEndTime', context.req.reqEndTime);
+
+    let render = context.req.renderEndTime-context.req.renderStartTime
+    let total = context.req.reqEndTime-context.req.reqStartTime
     console.log('----------------analysis s-------------------------');
-    console.log('reqStartTime', context.req.reqStartTime);
-    console.log('renderStartTime', context.req.renderStartTime);
-    console.log('renderEndTime', context.req.renderEndTime);
-    console.log('reqEndTime', context.req.reqEndTime);
-    console.log('nuxt:render:duration', context.req.renderEndTime-context.req.renderStartTime);
-    console.log('nuxt:http:duration', context.req.reqEndTime-context.req.reqStartTime);
+    console.log('nuxt:render:duration:', render);
+    console.log('nuxt:http:duration:', total);
+    sendToVdruid(total, render, 'nuxt')
     console.log('----------------analysis e---------------------- --');
   },
 })
