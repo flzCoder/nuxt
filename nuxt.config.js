@@ -23,4 +23,9 @@ export default {
     middleware: 'render',
   },
   hooks: hooks(this),
+  server: {
+    port: 8181,
+    host: '0.0.0.0',
+  },
+
 }
